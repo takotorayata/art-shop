@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tata">
+    <meta name="description" content="online-shop">
+    <meta name="keywords" content="shop html css js">
+
+    <title>Vladimir Lemzyakov</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+    
+    <link href="https://fonts.cdnfonts.com/css/arista-signature" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/arista-signature" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!-- MENU -->
+        <div>
+            <div id="menuToggle">
+                <input type="checkbox" onclick="togNav()">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+            </div>
+            <div>
+                <nav class="nav-menu" id="menu">
+                    <ul>
+                        <li><a href="#" onclick="openSection('figurative1')">FIGURATIVE</a></li>
+                        <li><a href="#" onclick="openSection('painting1')">PAINTING</a></li>
+                        <li><a href="#" onclick="openSection('portrait1')">PORTRAIT</a></li>
+                        <li><a href="#" onclick="openSection('stilllife1')">STILL LIFE</a></li>
+                        <li><a href="#" onclick="openSection('landscape1')">LANDSCAPE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- BASKET -->
+        <div class="basket" id="basket1">
+            <div class="basketIcon">
+                <p class="numOfBasket">0</p>
+                <svg width="58" height="44" viewBox="0 0 58 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.75 21.2222H2L9.875 43H48.125L56 21.2222H40.25M17.75 21.2222L26.75 1M17.75 21.2222H40.25M40.25 21.2222L31.25 1"
+                    stroke="black" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+        <div class="basketMessage">
+            <p class="basketMessageElm">Elements:</p>
+            <div class = "items">
+                <div class="cart"></div>
+                <p class="basketMessageText" id="delete">No items in the cart</p>
+            </div>
+            <div class="basketMessagePrice" id="total">Total price: 0$</div>
+            <div class="total1"></div>
+            <div class="pricesDom"></div>
+            <button class="basketClear" onclick="deleteAllButton()">Delete all</button>
+        </div>
+    </header>
+    <main>
+        <!-- FIGURATIVE -->
+        <div class="figurative" id="figurative1">
+            <div class="figurative-content">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSection('figurative1')">&times;</a>
+                <div class="products">
+                    <!-- PAGE 1 -->
+                    <div class="product">
+                        <a class="img" id="product__image" href='https://postimg.cc/dksxWKk6' target='_blank'><img src='https://i.postimg.cc/C1kpxhw3/DSC3861.jpg' alt='DSC3861' /></a>
+                        <p class="text">Name: <span id="product__name">'How the magic strings play'</span></p>
+                        <p class="text1">Material: oil, canvas</p>
+                        <p class="text2">Technics: figurative, secession, eclecticism</p>
+                        <p class="text3">Size: 100 x 110</p>
+                        <p class="text4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 2 -->
+                    <div class="product">
+                        <a class="img" id="product__image" href='https://postimg.cc/dD5hnkTh' target='_blank'><img src='https://i.postimg.cc/qMT2J2Jx/497289.jpg' alt='497289' /></a>
+                        <p class="text">Name: <span id="product__name">'Lilacs reached out to my window'</span></p>
+                        <p class="text1">Material: oil, canvas</p>
+                        <p class="text2">Technics: figurative, secession, eclecticism</p>
+                        <p class="text3">Size: 90 x 110</p>
+                        <p class="text4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 3 -->
+                    <div class="product">
+                        <a class="img" id="product__image" href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/vTRf6VWM/DSC-0466crp.jpg' alt='DSC-0466crp' /></a>
+                        <p class="text">Name: <span id="product__name">'Night talk'</span></p>
+                        <p class="text1">Material: oil, canvas</p>
+                        <p class="text2">Technics: figurative, secession, eclecticism</p>
+                        <p class="text3">Size: 90 x 110</p>
+                        <p class="text4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 4 -->
+                    <div class="product">
+                        <a class="img" id="product__image" href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/y69FCLHN/a15.jpg' alt='a15' /></a>
+                        <p class="text">Name: <span id="product__name">'Wizard'</span></p>
+                        <p class="text1">Material: oil, cardboard</p>
+                        <p class="text2">Technics: figurative, secession, eclecticism</p>
+                        <p class="text3">Size: 90 x 110</p>
+                        <p class="text4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- SLIDER -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10093;</a>
+                </div>
+            </div>
+        </div>
+        <!-- PAINTING -->
+        <div class="painting" id="painting1">
+            <div class="painting-content">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSection('painting1')">&times;</a>
+                <div class="products">
+                    <!-- PAGE 1 -->
+                    <div class="product">
+                        <a class="img1" id="product__image" href="https://postimg.cc/YjDdWVRG" target="_blank"><img src="https://i.postimg.cc/5NbTZWF3/496652.jpg" alt="496652" /></a>
+                        <p class="textA">Name: <span id="product__name">'Painting'</span></p>
+                        <p class="textA1">Material: oil</p>
+                        <p class="textA2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textA3">Size: 2.70 x 1.60</p>
+                        <p class="textA4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn2" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 2 -->
+                    <div class="product">
+                        <a class="img2" id="product__image" href="https://postimg.cc/2b22TXft" target="_blank"><img src="https://i.postimg.cc/d3KpszNJ/496651.jpg" alt="496651" /></a>
+                        <p class="textB">Name: <span id="product__name">'Painting'</span></p>
+                        <p class="textB1">Material: oil</p>
+                        <p class="textB2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textB3">Size: 2.70 x 1.60</p>
+                        <p class="textB4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn2" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 3 -->
+                    <div class="product">
+                        <a class="img3" id="product__image" href="https://postimg.cc/XGVsf6tF" target="_blank"><img src="https://i.postimg.cc/wvNnd6VW/image-0-02-05-412187f10234bc8222c64d3d26a4c3abda9b7ddfd0b3b6ba165f44b2b7647e96-V.jpg" alt="image-0-02-05-412187f10234bc8222c64d3d26a4c3abda9b7ddfd0b3b6ba165f44b2b7647e96-V" /></a>
+                        <p class="textC">Name: <span id="product__name">'Painting'</span></p>
+                        <p class="textC1">Material: oil</p>
+                        <p class="textC2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textC3">Size: 2.70 x 1.60</p>
+                        <p class="textC4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn3" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 4 -->
+                    <div class="product">
+                        <a class="img4" id="product__image" href="https://postimg.cc/kRGwHFJg" target="_blank"><img src="https://i.postimg.cc/d3mXL4gr/image-0-02-05-b3d6cac1fca500a09d6b42813dace16e666d9bb7325813bbf34a90f2e3d64be2-V.jpg" alt="image-0-02-05-b3d6cac1fca500a09d6b42813dace16e666d9bb7325813bbf34a90f2e3d64be2-V" /></a>
+                        <p class="textD">Name: <span id="product__name">'Painting'</span></p>
+                        <p class="textD1">Material: oil</p>
+                        <p class="textD2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textD3">Size: 2.70 x 1.60</p>
+                        <p class="textD4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn4" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- SLIDER -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10093;</a>
+                </div>
+            </div>
+        </div>
+        <!-- PORTRAIT -->
+        <div class="portrait" id="portrait1">
+            <div class="portrait-content">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSection('portrait1')">&times;</a>
+                <div class="products">
+                    <!-- PAGE 1 -->
+                    <div class="product">
+                        <a class="img5" id="product__image" href='https://postimg.cc/sQvbpjrL' target='_blank'><img src='https://i.postimg.cc/V6R1PvHz/DSC3867.jpg' alt='DSC3867' /></a>
+                        <p class="textE">Name: <span id="product__name">'Portrait of Mazur S.I'</span></p>
+                        <p class="textE1">Material: oil, canvas</p>
+                        <p class="textE2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textE3">Size: 103 x 144</p>
+                        <p class="textE4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn5" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 2 -->
+                    <div class="product">
+                        <a class="img6" id="product__image" href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/sD2fyPrq/a14.jpg' alt='a14' /></a>
+                        <p class="textF" >Name: <span id="product__name">'Portrait of woman'</span></p>
+                        <p class="textF1">Material: oil, canvas</p>
+                        <p class="textF2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textF3">Size: 79 x 89</p>
+                        <p class="textF4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn6" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 3 -->
+                    <div class="product">
+                        <a class="img7" id="product__image" href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/qBwB9b92/a3.jpg" alt="a3" /></a>
+                        <p class="textG">Name: <span id="product__name">'Flares'</span></p>
+                        <p class="textG1">Material: oil, canvas</p>
+                        <p class="textG2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textG3">Size: 80 x 60</p>
+                        <p class="textG4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn7" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 4 -->
+                    <div class="product">
+                        <a class="img8" id="product__image" href="https://postimg.cc/xksWJkWH" target="_blank"><img src="https://i.postimg.cc/bJ885kg6/DSC3650.jpg" alt="DSC3650" /></a>
+                        <p class="textH">Name: <span id="product__name">'Autoportrait'</span></p>
+                        <p class="textH1">Material: oil, cardboard</p>
+                        <p class="textH2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textH3">Size: 30 x 23.5</p>
+                        <p class="textH4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn8" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- SLIDER -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10093;</a>
+                </div>
+            </div>
+        </div>
+        <!-- STILLLIFE -->
+        <div class="stilllife" id="stilllife1">
+            <div class="stilllife-content">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSection('stilllife1')">&times;</a>
+                <div class="products">
+                    <!-- PAGE 1 -->
+                    <div class="product">
+                        <a class="img9" id="product__image" href='https://postimg.cc/kDHy4SMW' target='_blank'><img src='https://i.postimg.cc/tCqvBdLv/DSC3610.jpg' alt='DSC3610' /></a>
+                        <p class="textI">Name: <span id="product__name">'Poppies. Pushkin'</span></p>
+                        <p class="textI1">Material: oil, canvas</p>
+                        <p class="textI2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textI3">Size: 30 x 50</p>
+                        <p class="textI4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn9" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 2 -->
+                    <div class="product">
+                        <a class="img10" id="product__image" href='https://postimg.cc/Btjxdv5b' target='_blank'><img src='https://i.postimg.cc/dQB4ZkL2/DSC3638.jpg' alt='DSC3638' /></a>
+                        <p class="textJ">Name: <span id="product__name">'Poppies'</span></p>
+                        <p class="textJ1">Material: oil, canvas</p>
+                        <p class="textJ2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textJ3">Size: 70 x 75</p>
+                        <p class="textJ4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 3 -->
+                    <div class="product">
+                        <a class="img11" id="product__image" href='https://postimg.cc/Hjn2dzmp' target='_blank'><img src='https://i.postimg.cc/DfdYQpYb/DSC3608.jpg' alt='DSC3608' /></a>
+                        <p class="textK">Name: <span id="product__name">'Stillife. Holiday. Gifts'</span></p>
+                        <p class="textK1">Material: oil, canvas</p>
+                        <p class="textK2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textK3">Size: 60 x 56</p>
+                        <p class="textJ4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 4 -->
+                    <div class="product">
+                        <a class="img12" id="product__image" href='https://postimg.cc/dLTjT0Dp' target='_blank'><img src='https://i.postimg.cc/BQmYkL3S/DSC3635.jpg' alt='DSC3635' /></a>
+                        <p class="textL">Name: <span id="product__name">'Sunflowers'</span></p>
+                        <p class="textL1">Material: oil, cardboard</p>
+                        <p class="textL2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textL3">Size: 70 x 75</p>
+                        <p class="textL4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- SLIDER -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10093;</a>
+                </div>
+            </div>
+        </div>
+        <!-- LANDSCAPE -->
+        <div class="landscape" id="landscape1">
+            <div class="landscape-content">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSection('landscape1')">&times;</a>
+                <div class="products">
+                    <!-- PAGE 1 -->
+                    <div class="product">
+                        <a class="img13" id="product__image" href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/g2n0JDcx/a26.jpg' alt='a26' /></a>
+                        <p class="textM">Name: <span id="product__name">'Forest after rain'</span></p>
+                        <p class="textM1">Material: oil, canvas</p>
+                        <p class="textM2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textM3">Size: 110 x 100</p>
+                        <p class="textM4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 2 -->
+                    <div class="product">
+                        <a class="img14" id="product__image" href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/gkMJm5p9/artlib-gallery-158478-b.jpg' alt='artlib-gallery-158478-b' /></a>
+                        <p class="textN">Name: <span id="product__name">'Sunflowers near house. Summer'</span></p>
+                        <p class="textN1">Material: oil, canvas</p>
+                        <p class="textN2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textN3">Size: 100 x 110</p>
+                        <p class="textN4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn1" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 3 -->
+                    <div class="product">
+                        <a class="img15" id="product__image" href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/XJv9LPwn/a93.jpg" alt="a93" /></a>
+                        <p class="textO">Name: <span id="product__name">'Spring. Mountains'</span></p>
+                        <p class="textO1">Material: oil, canvas</p>
+                        <p class="textO2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textO3">Size: 70 x 75</p>
+                        <p class="textO4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn10" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- PAGE 4 -->
+                    <div class="product">
+                        <a class="img16" id="product__image" href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/rpjSSTRh/b35.jpg" alt="b35" /></a>
+                        <p class="textP">Name: <span id="product__name">'Eva's house'</span></p>
+                        <p class="textP1">Material: oil, cardboard</p>
+                        <p class="textP2">Technics: figurative, secession, eclecticism</p>
+                        <p class="textP3">Size: 70 x 75</p>
+                        <p class="textP4">Price: <span id="product__price">1000$</span></p>
+                        <button class="btn11" data-action="ADD_TO_CART">Add to cart</button>
+                    </div>
+                    <!-- SLIDER -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10093;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icon">
+            <a href="https://www.t.me/ta_kotoraya_ta" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+        <h1>Vladimir Lemzyakov</h1>
+    </footer>
+</body>
+
+</html>
