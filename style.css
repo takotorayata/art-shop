@@ -1,3 +1,10 @@
+/* products */
+/* .products {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+} */
+
 /* BACKGROND */
 body {
     background-image: url(https://i.postimg.cc/C1kpxhw3/DSC3861.jpg);
@@ -10,7 +17,7 @@ body {
 /* MENU */
 #menuToggle {
     top: 10px;
-    right: 10px;
+    right: 5px;
     overflow: hidden;
     position: absolute;
     width: 35px;
