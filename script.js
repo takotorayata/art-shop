@@ -17,7 +17,7 @@ function togNav() {
 function openSection(id) {
     let element = document.getElementById(id);
     element.style.width = "100%";
-    howSlides(1, element);
+    showSlides(1, element);
 }
 function closeSection(id) {
     document.getElementById(id).style.width = "0%";
