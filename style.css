@@ -1514,12 +1514,11 @@ h1 {
 }
 
 
-/* MEDIA SCREEN */
-/* !!!!MUST CHANGE: ALL; WRONG MEDIA QUERIES */
-
-/* -- FOR IPHONE 6 */
-/* !!!!MUST ADD: m queries for .img3,4,6,7,8,10,11,12,15,16 */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+/*    MEDIA SCREEN    */
+/*    !!!!MUST CHANGE: ALL; WRONG MEDIA QUERIES    */
+/*    -- FOR IPHONE 6    */
+/*    !!!!MUST ADD: media queries for .img3,4,6,7,8,10,11,12,15,16    */
+ @media only screen and (min-width: 320px) and (max-width: 480px) {
     .closebtn {
         z-index:99;
         transition: 0.4s;
@@ -1558,8 +1557,8 @@ h1 {
         width: 220px;
         height: 120px;
     }
-    .basketMessageElm, .noItems, .basketMessageText, .basketMessagePrice,
-    .basketClear, .totalPrice, .cart, .cartItems, .prices0Dom {
+    .basketMessageElm, .noItems, .basketMessageText,   .basketMessagePrice, .basketClear, .totalPrice, 
+    .cart, .cartItems, .prices0Dom {
         font-size: 15px;
     }
     .nav-menu {
@@ -1592,12 +1591,13 @@ h1 {
         position: relative;
     }
     .painting img {
-        width: 250px !important;
+     width: 250px !important;
         height: 400px !important;
         top: 0;
         left: -230px;
         position: relative;
-    } 
+     
+   } 
     .painting p {
         top: 110px;
         position: relative;
@@ -1634,8 +1634,8 @@ h1 {
         font-size: 30px;
         max-width: 940px;
     }
-    #figurative1 .closebtn, #painting1 .closebtn, #portrait1 .closebtn,
-    #stilllife1 .closebtn, #landscape1 .closebtn {
+    #figurative1 .closebtn,  #painting1 .closebtn,  #portrait1 .closebtn,  
+    #stilllife1 .closebtn,  #landscape1 .closebtn  {
         top: 5px;
         right: 8px;
         font-size: 30px;
@@ -1799,9 +1799,8 @@ h1 {
         position: absolute;
     }
 } 
-
-/* -- FOR IPAD PORTRAIT AND OTHER TABLETS */
-/* !!!!MUST ADD: m queries for .img 1,2,3,4,5,6,7,8,9,15,16 */
+/*    -- FOR IPAD PORTRET AND OTHER TABLETS    */
+/*    !!!!MUST ADD: media queries for .img 1,2,3,4,5,6,7,8,9,15,16    */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
     .closebtn {
         z-index:99;
@@ -1817,8 +1816,8 @@ h1 {
         max-width: 768px;
         height: 100%;
     }
-    #figurative1 .closebtn, #painting1 .closebtn, #portrait1 .closebtn,
-    #stilllife1 .closebtn, #landscape1 .closebtn {
+    #figurative1 .closebtn,  #painting1 .closebtn,  #portrait1 .closebtn,
+    #stilllife1 .closebtn,  #landscape1 .closebtn  {
         position: absolute;
         top: 10px;
         right: 39px;
@@ -1826,11 +1825,12 @@ h1 {
         color: rgb(250, 3, 3);
         text-decoration: none;
     }
-    .figurative img {
-        width: 600px;
-        height: 600px;
-        top: -120px;
-        left: 20px;
+    #figurative1 img {
+        width: 600px !important;
+        height: 600px !important;
+        top: 0;
+        left: -110px;
+        position: relative;
     }
     .figurative p {
         top: 110px;
@@ -1863,25 +1863,24 @@ h1 {
         cursor: pointer;
         border: 1px solid rgb(255, 255, 255, 0.6);
         transition: all 0.3s ease;
-        background-color: rgba(14,13,13);
+       background-color: rgba(14,13,13);
     }
 }
-/* ++ FOR IPAD LANDSCAPE */
+/*    ++ FOR IPAD LANDSCAPE    */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .closebtn {
         z-index:99;
         transition: 0.4s;
     }
 }
-/* ++ FOR IPAD PRO LANDSCAPE */
+/*    ++ FOR IPAD PRO LANDSCAPE    */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
     .closebtn {
         z-index:99;
         transition: 0.4s;
     }
 }
-/* !!!!must add: m queries for all pages */
-/* -- FOR IPAD PRO PORTRET */
+/*    ++ FOR IPAD PRO PORTRET    */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
     .closebtn {
         z-index: 99;
@@ -1897,7 +1896,7 @@ h1 {
         top: 1275px;
     }
 }
-/* ++ FOR TABLETS LANDSCAPE */
+/*    ++ FOR TABLETS LANDSCAPE   */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .closebtn {
         z-index:99;
@@ -1914,7 +1913,7 @@ h1 {
         top: 1275px;
     }
 }
-/* ++ FOR LAPTOPS */
+/*    ++ FOR LAPTOPS    */
 @media only screen and (min-width: 1024px) and (max-width: 1600px) {
     .closebtn {
         z-index:99;
@@ -1931,7 +1930,7 @@ h1 {
         top: 1275px;
     }
 }
-/* ++ FOR IMAC (27'') */
+/*    ++ FOR IMAC (27'')    */
 @media only screen and (min-width: 2560px){
     .closebtn {
         z-index:99;
@@ -1948,8 +1947,8 @@ h1 {
         top: 2265px;
     }
 }
-/* -- FOR IMAC RETINA(21.7'') */
-/* !!!!must add: m queries for all art-content */
+/*    -- FOR IMAC RETINA(21.7'')    */
+/*   !!!!must add: m queries for all art-content    */
 @media only screen and (min-width: 4096px){
     .closebtn {
         z-index:99;
@@ -1966,8 +1965,8 @@ h1 {
         top: 2275px;
     }
 }
-/* -- FOR IMAC RETINA(27'') */
-/* !!!!must add: m queries for all art-content */
+/*   -- FOR IMAC RETINA(27'')    */
+/*   !!!!must add: m queries for all art-content    */
 @media only screen and (min-width: 5120px){
     .closebtn {
         z-index:99;
