@@ -1,0 +1,1582 @@
+/*   BACKGROND    */
+body {
+background-image: url(https://i.postimg.cc/C1kpxhw3/DSC3861.jpg);
+    background-size: 50%; 
+    background-attachment: fixed; 
+    background-repeat: repeat; 
+    background-position: center;
+}
+/*    MENU    */
+#menuToggle {
+    top: 10px;
+    right: 10px;
+    overflow: hidden;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(14, 13, 13, 0.7);
+    background: rgba(14, 13, 13, 0.7);
+}
+#menuToggle input {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+#menuToggle span{
+    width: 19px;
+    height: 1px;
+    margin: 2px;
+    background-color: rgb(250, 249, 249);
+    transition: all .5s cubic-bezier(.08,.81,.87,.71);
+}
+#span1 {
+    transform-origin: 4px 0px;
+}
+#span3 {
+    transform-origin: bottom right;
+}
+#menuToggle input:checked ~ #span1 {
+    background-color:  rgb(250, 3, 3);
+    transform: rotate(45deg) translate(3px);
+}
+
+#menuToggle input:checked ~ #span2 {
+    background-color:  rgb(250, 3, 3);
+    transform: rotate(495deg) translate(1px);   
+}
+#menuToggle input:checked ~ #span3 {
+    background-color:  rgb(250, 3, 3);
+    transform: rotate(45deg);
+    opacity: 0;
+}
+#menuToggle input:hover ~ span {
+    background-color: rgb(250, 3, 3);
+}
+.nav-menu {
+    overflow: hidden;
+    height: 35px;
+    position: absolute;
+    right: 49px;
+    top: 10px;
+    background: rgba(14, 13, 13, 0.7);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(14, 13, 13, 0.7);
+}
+#menu { 
+    width: 0;
+}
+.nav-menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 15px;
+    line-height: 10px;
+    margin: 3px;
+}
+.nav-menu ul li a:hover {
+    color:  rgb(250, 3, 3);
+}
+/*    BASKET   */
+.basket {
+    right: 67px;
+    top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    transition: background-color ease-in-out 0.6s;
+}
+.basket:hover {
+    cursor: pointer;
+}
+.basket:hover + .basketMessage {
+    opacity: 1;
+    visibility: visible;
+}
+.basketIcon {
+    position: absolute;
+}
+.numOfBasket {
+    position: absolute;
+    top: -2px;
+    right: -8px;
+}
+.basketIcon svg {
+    max-width: 40px;
+}
+.basketMessage {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 10vh;
+    right: 3px;
+    background-color: rgba(14, 13, 13, 0.7);
+    width: 250px;
+    height: 150px;
+    padding: 3px;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+}
+.basketMessage:hover {
+    opacity: 1;
+    visibility: visible;
+}
+.basketMessageElm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 0;
+    padding-left: 10px;
+    width: 100%;
+    color: rgb(250, 3, 3);
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+}
+.basketMessageText {
+    padding-top: 25px;
+    padding-left: 8px;
+    position: absolute;
+    overflow: auto;
+    height: 90px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    color: rgb(250, 3, 3);
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+}
+.basketMessagePrice {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: rgb(250, 3, 3);
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+}
+.basketClear {
+    bottom: 8px;
+    right: 6px;
+    position: absolute;
+    cursor: pointer;
+    border: 1px solid rgb(93, 17, 17);
+    margin: 0;
+    transition: background-color 0.6s ease-in-out;
+    color: rgb(250, 3, 3);
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    background-color:rgba(14, 13, 13, 0.1);
+}
+.noItems {
+    padding-top: 25px;
+    padding-left: 8px;
+    position: absolute;
+    overflow: auto;
+    height: 90px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    color: rgb(250, 3, 3);
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+}
+.totalPrice {
+    bottom: 3px;
+    padding: 6px 6px;
+    position: absolute;
+    cursor: pointer;
+    margin: 0;
+    color: rgb(250, 3, 3);
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+}
+.prices0Dom {
+    bottom: 3px;
+    padding: 6px 6px;
+    position: absolute;
+    cursor: pointer;
+    margin: 0;
+    color: rgb(250, 3, 3);
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+}
+.cart  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 0;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.cartItems {
+    position: relative;
+    top: 23px;
+    color: rgb(250, 3, 3);
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+}
+/*   CONTENT    */
+/*    FIGURATIVE    */
+.figurative {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(14,13,13);
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+.figurative1 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.figurative .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 39px;
+    font-size: 40px;
+    color: rgb(250, 3, 3);
+    text-decoration: none;
+}
+.img {
+    top: 120px;
+    left: 170px;
+    position: relative;
+    width: 100%;
+}
+.text {
+    top: 110px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.text1 {
+    top: 112px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.text2 {
+    top: 114px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.text3 {
+    top: 116px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.text4 {
+    top: 118px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.btn1 {
+    position: absolute;
+    top: 940px;
+    left: 640px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+/*    PAINTING    */
+.painting {
+    height: 100%;
+    width: 0;
+    position: fixed;;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(14,13,13);
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+.painting1 {
+    position: relative;
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.painting .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 39px;
+    font-size: 40px;
+    color: rgb(250, 3, 3);
+    text-decoration: none;
+}
+.img1 {
+    top: 120px;
+    left: 280px;
+    position: relative;
+}
+.textA {
+    top: 110px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textA1 {
+    top: 112px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textA2 {
+    top: 114px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textA3 {
+    top: 116px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textA4 {
+    top: 118px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img2 {
+    top: 120px;
+    left: 280px;
+    position: relative;
+}
+.textB {
+    top: 110px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textB1 {
+    top: 112px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textB2 {
+    top: 114px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textB3 {
+    top: 116px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textB4 {
+    top: 118px;
+    position: relative;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img3 {
+    top: 120px;
+    left: 160px;
+    position: relative;
+}
+.textC {
+    top: 110px;
+    position: relative;
+    left: 160px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textC1 {
+    top: 112px;
+    position: relative;
+    left: 160px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textC2 {
+    top: 114px;
+    position: relative;
+    left: 160px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textC3 {
+    top: 116px;
+    position: relative;
+    left: 160px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textC4 {
+    top: 118px;
+    position: relative;
+    left: 160px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img4 {
+    top: 120px;
+    left: 260px;
+    position: relative;
+}
+.textD {
+    top: 110px;
+    position: relative;
+    left: 260px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textD1 {
+    top: 112px;
+    position: relative;
+    left: 260px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textD2 {
+    top: 114px;
+    position: relative;
+    left: 260px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textD3 {
+    top: 116px;
+    position: relative;
+    left: 260px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textD4 {
+    top: 118px;
+    position: relative;
+    left: 260px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.btn2 {
+    position: absolute;
+    top: 1080px;
+    left: 490px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn3 {
+    position: absolute;
+    top: 980px;
+    left: 670px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn4 {
+    position: absolute;
+    top: 980px;
+    left: 570px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+/*    PORTRET    */
+.portret {
+    height: 100%;
+    width: 0;
+    position: fixed;;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(14,13,13);
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+.portret1 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.portret .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 39px;
+    font-size: 40px;
+    color: rgb(250, 3, 3);
+    text-decoration: none;
+}
+.img5 {
+    top: 120px;
+    left: 140px;
+    position: relative;
+}
+.textE {
+    top: 110px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textE1 {
+    top: 112px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textE2 {
+    top: 114px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textE3 {
+    top: 116px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textE4 {
+    top: 118px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img6 {
+    top: 120px;
+    left: 200px;
+    position: relative;
+}
+.textF {
+    top: 110px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textF1 {
+    top: 112px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textF2 {
+    top: 114px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textF3 {
+    top: 116px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textF4 {
+    top: 118px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img7 {
+    top: 120px;
+    left: 120px;
+    position: relative;
+}
+.textG {
+    top: 110px;
+    position: relative;
+    left: 120px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textG1 {
+    top: 112px;
+    position: relative;
+    left: 120px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textG2 {
+    top: 114px;
+    position: relative;
+    left: 120px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textG3 {
+    top: 116px;
+    position: relative;
+    left: 120px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textG4 {
+    top: 118px;
+    position: relative;
+    left: 120px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img8 {
+    top: 120px;
+    left: 200px;
+    position: relative;
+}
+.textH {
+    top: 110px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textH1 {
+    top: 112px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textH2 {
+    top: 114px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textH3 {
+    top: 116px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textH4 {
+    top: 118px;
+    position: relative;
+    left: 200px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.btn5 {
+    position: absolute;
+    top: 880px;
+    left: 650px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn6 {
+    position: absolute;
+    top: 980px;
+    left: 610px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn7 {
+    position: absolute;
+    top: 880px;
+    left: 730px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn8 {
+    position: absolute;
+    top: 980px;
+    left: 610px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+/*    STILLIFE    */
+.stilllife {
+    height: 100%;
+    width: 0;
+    position: fixed;;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(14,13,13);
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+.stilllife1 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.stilllife .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 39px;
+    font-size: 40px;
+    color: rgb(250, 3, 3);
+    text-decoration: none;
+}
+.img9 {
+    top: 260px;
+    left: 100px;
+    position: relative;
+}
+.textI {
+    top: 250px;
+    position: relative;
+    left: 100px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textI1 {
+    top: 252px;
+    position: relative;
+    left: 100px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textI2 {
+    top: 254px;
+    position: relative;
+    left: 100px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textI3 {
+    top: 256px;
+    position: relative;
+    left: 100px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textI4 {
+    top: 258px;
+    position: relative;
+    left: 100px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img10 {
+    top: 120px;
+    left: 170px;
+    position: relative;
+}
+.textJ {
+    top: 110px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textJ1 {
+    top: 112px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textJ2 {
+    top: 114px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textJ3 {
+    top: 116px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textJ4 {
+    top: 118px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img11 {
+    top: 120px;
+    left: 170px;
+    position: relative;
+}
+.textK {
+    top: 110px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textK1 {
+    top: 112px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textK2 {
+    top: 114px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textK3 {
+    top: 116px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textK4 {
+    top: 118px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img12 {
+    top: 120px;
+    left: 170px;
+    position: relative;
+}
+.textL {
+    top: 110px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textL1 {
+    top: 112px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textL2 {
+    top: 114px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textL3 {
+    top: 116px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textL4 {
+    top: 118px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.btn9 {
+    position: absolute;
+    top: 810px;
+    left: 710px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+/*    LANDSCAPE    */
+.landscape {
+    height: 100%;
+    width: 0;
+    position: fixed;;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(14,13,13);
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+.landscape1 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.landscape .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 39px;
+    font-size: 40px;
+    color: rgb(250, 3, 3);
+    text-decoration: none;
+}
+.img13 {
+    top: 120px;
+    left: 170px;
+    position: relative;
+}
+.textM {
+    top: 110px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textM1 {
+    top: 112px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textM2 {
+    top: 114px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textM3 {
+    top: 116px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textM4 {
+    top: 118px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img14 {
+    top: 120px;
+    left: 170px;
+    position: relative;
+}
+.textN {
+    top: 110px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textN1 {
+    top: 112px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textN2 {
+    top: 114px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textN3 {
+    top: 116px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textN4 {
+    top: 118px;
+    position: relative;
+    left: 170px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img15 {
+    top: 220px;
+    left: 140px;
+    position: relative;
+}
+.textO {
+    top: 210px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textO1 {
+    top: 212px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textO2 {
+    top: 214px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textO3 {
+    top: 216px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textO4 {
+    top: 218px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.img16 {
+    top: 220px;
+    left: 140px;
+    position: relative;
+}
+.textP {
+    top: 210px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textP1 {
+    top: 212px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textP2 {
+    top: 214px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textP3 {
+    top: 216px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.textP4 {
+    top: 218px;
+    position: relative;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+}
+.btn10 {
+    position: absolute;
+    top: 880px;
+    left: 650px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn11 {
+    position: absolute;
+    top: 880px;
+    left: 650px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+/*    SLIDER    */
+.prev:hover, .next:hover {
+    color: rgb(250, 3, 3);
+}
+.products {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 480px;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-size: 45px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/*    FOOTER    */
+h1 {
+    position: absolute;
+    top: 834px;
+    right: 7px;
+    font-weight: 100;
+    font-size: 68px;
+    font-family: 'Arista Signature';
+    color: rgb(7, 7, 7);
+}
+.social-icon {
+  position: absolute;
+  top: 885px;
+  right: 2px;
+  font-size: 30px;
+}
+.social-icon a {
+  color: rgba(14,13,13);
+}
+.social-icon a:hover {
+  color: rgb(250, 3, 3);
+}
+/*    FONTS    */
+font-face {
+	font-family: Poiret One, cursive; 
+	src: url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');  
+	font-weight: normal;  
+}
+/*
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*/
+font-face {
+	font-family: Arista Signature; 
+	src: url('fonts/arista-signature/Arista Signature.woff2') format('woff2'),
+    url('fonts/arista-signature/Arista Signature.woff') format('woff');  
+	font-weight: normal;  
+}
+@import url('http://fonts.cdnfonts.com/css/arista-signature');
+
+/*    MEDIA SCREEN    */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-size:cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    background-position: center;
+  }
+  footer h1 {
+    float: right;
+    top: 834px;
+    right: 7px;
+    font-weight: 100;
+    font-size: 54px;
+    font-family: 'Arista Signature';
+    color: rgb(7, 7, 7);
+  }
+  .social-icon {
+    float: right;
+    top: 875px;
+    font-size: 25px;
+  }
+  .basket {
+    width: 5px;
+    height: 5px;
+    margin-top: 13px;
+  }
+  #menuToggle {
+    width: 30px;
+    height: 30px;
+    right: 5px;
+  }
+  .basketMessage {
+    width: 220px;
+    height: 120px;
+  }
+  .basketMessageElm, .noItems, .basketMessageText,   .basketMessagePrice, .basketClear, .totalPrice, .cart, .cartItems, .prices0Dom {
+    font-size: 15px;
+  }
+.nav-menu {
+   height: 30px;
+   width: 200px;
+   overflow: hidden;
+  }
+  #menu {
+   height: 30px;
+   max-width: 300px;
+  }
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 10px;
+    line-height: 1px;
+    margin: 3px;
+    vertical-align: 9px;
+  }
+  #figurative1, #painting1, #landscape1, #portret1, #stillife1 {
+    max-width: 480px;
+  }
+#figurative1 img {
+    width: 270px !important;
+    height: 270px !important;
+   top: 120px;
+   left: -135px;
+   position: relative;
+  }
+ .img1  {
+    width: 270px !important;
+    height: 270px !important;
+   top: 120px;
+   left: -135px;
+   position: relative;
+  }
+  .products p {
+    top: 250px;
+    position: relative;
+    left: 35px;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Poiret One', cursive;
+    color: rgb(250, 3, 3);
+  }
+  .prev, .next {
+    top: 360px;
+    width:1000px;
+    padding: 3px;
+    margin-top: 0;
+    font-size: 30px;
+  }
+  .figurative .closebtn,  .painting .closebtn,  .portret .closebtn,  .stilllife .closebtn,  .landscape .closebtn  {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+    color: rgb(250, 3, 3);
+    text-decoration: none;
+}
+.figurative .btn1 {
+    top: 450px;
+    right: -15px;
+   position: absolute;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 15px;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+  }
+} 
