@@ -1847,25 +1847,12 @@ h1 {
         transition: all 0.3s ease;
        background-color: rgba(14,13,13);
     }
-    footer h1 {
-        float: right;
-        top: 820px !important;
-        right: 7px !important;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 860px !important;
-    }
 }
 /* ++ FOR IPAD LANDSCAPE */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .closebtn {
         z-index:99;
         transition: 0.4s;
-    }
-    body {
-        background: url();
     }
 }
 /* !!!!must add: m queries for all pages */
@@ -1877,17 +1864,6 @@ h1 {
     .closebtn {
         z-index:99;
         transition: 0.4s;
-    }
-    footer h1 {
-        float: right;
-        top: 820px !important;
-        right: 15px !important;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 860px !important;
-        right: 15px !important;
     }
 }
 /* !!!!must add: m queries for all pages */
@@ -1908,17 +1884,6 @@ h1 {
     .social-icon {
         float: right;
         top: 1275px;
-    }
-    footer h1 {
-        float: right;
-        top: 820px !important;
-        right: 7px !important;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 850px !important;
-        right: 8px !important;
     }
 }
 /* ++ FOR TABLETS LANDSCAPE */
