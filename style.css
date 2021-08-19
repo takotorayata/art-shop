@@ -1,23 +1,7 @@
-/* products */
-/* .products {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-} */
-
-/* BACKGROND */
-body {
-    background-image: url(https://i.postimg.cc/C1kpxhw3/DSC3861.jpg);
-    background-size: 50%;
-    background-attachment: fixed;
-    background-repeat: repeat;
-    background-position: center;
-}
-
-/* MENU */
+/*    MENU    */
 #menuToggle {
     top: 10px;
-    right: 5px;
+    right: 10px;
     overflow: hidden;
     position: absolute;
     width: 35px;
@@ -54,10 +38,10 @@ body {
 #menuToggle input:checked ~ #span1 {
     background-color:  rgb(250, 3, 3);
     transform: rotate(45deg) translate(3px);
-} 
+}
 #menuToggle input:checked ~ #span2 {
     background-color:  rgb(250, 3, 3);
-    transform: rotate(495deg) translate(1px);
+    transform: rotate(495deg) translate(1px);   
 }
 #menuToggle input:checked ~ #span3 {
     background-color:  rgb(250, 3, 3);
@@ -67,18 +51,20 @@ body {
 #menuToggle input:hover ~ span {
     background-color: rgb(250, 3, 3);
 }
-.nav-menu {
-    overflow: hidden;
+nav {
+    width: 0;
     height: 35px;
     position: absolute;
     right: 49px;
     top: 10px;
     background: rgba(14, 13, 13, 0.7);
+    overflow: hidden;
     transition: 0.3s ease-in-out;
     box-shadow: 0 0 5px rgba(14, 13, 13, 0.7);
 }
-#menu { 
+.nav-menu {
     width: 0;
+    float: right;
 }
 .nav-menu ul li {
     list-style: none;
@@ -88,16 +74,19 @@ body {
     text-decoration: none;
     color: white;
     font-family: 'Poiret One', cursive;
-    font-size: 15px;
     line-height: 10px;
     margin: 3px;
+    font-size: 15px;
+}
+#menu {
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    cursor: pointer;
 }
 .nav-menu ul li a:hover {
     color:  rgb(250, 3, 3);
 }
-
-/* BASKET */
-/* BASKET ICON */
+/*    BASKET   */
 .basket {
     right: 67px;
     top: 10px;
@@ -107,7 +96,7 @@ body {
     align-items: center;
     height: 35px;
     width: 35px;
-    transition: ease-in-out 0.6s;
+    transition: background-color ease-in-out 0.6s;
 }
 .basket:hover {
     cursor: pointer;
@@ -127,7 +116,6 @@ body {
 .basketIcon svg {
     max-width: 40px;
 }
-/* BASKET MESSAGE */
 .basketMessage {
     opacity: 0;
     visibility: hidden;
@@ -135,7 +123,8 @@ body {
     top: 10vh;
     right: 3px;
     background-color: rgba(14, 13, 13, 0.7);
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
     height: 150px;
     padding: 3px;
     transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
@@ -189,6 +178,7 @@ body {
     position: absolute;
     cursor: pointer;
     border: 1px solid rgb(93, 17, 17);
+    width: max-content;
     margin: 0;
     transition: background-color 0.6s ease-in-out;
     color: rgb(250, 3, 3);
@@ -232,7 +222,7 @@ body {
     font-weight: 100;
     font-family: 'Poiret One', cursive;
 }
-.cart {
+.cart  {
     position: absolute;
     top: 0;
     left: 0;
@@ -251,14 +241,12 @@ body {
     font-weight: 100;
     font-family: 'Poiret One', cursive;
 }
-
-/* ART-CONTENT */
-
-/* FIGURATIVE */
+/*   CONTENT    */
+/*    FIGURATIVE    */
 .figurative {
     height: 100%;
     width: 0;
-    position: fixed;
+    position: fixed;;
     z-index: 1;
     top: 0;
     right: 0;
@@ -280,13 +268,10 @@ body {
     color: rgb(250, 3, 3);
     text-decoration: none;
 }
-/* FIGURATIVE - ALL PAGES */
 .img {
     top: 120px;
     left: 170px;
     position: relative;
-    width: 660px; 
-    height: 660px;
 }
 .text {
     top: 110px;
@@ -349,12 +334,11 @@ body {
     transition: all 0.3s ease;
     background-color: rgba(14,13,13);
 }
-
-/* PAINTING */
+/*    PAINTING    */
 .painting {
     height: 100%;
     width: 0;
-    position: fixed;
+    position: fixed;;
     z-index: 1;
     top: 0;
     right: 0;
@@ -377,12 +361,9 @@ body {
     color: rgb(250, 3, 3);
     text-decoration: none;
 }
-/* PAINTING PAGE 1 */
 .img1 {
     top: 120px;
     left: 280px;
-    width: 400px;
-    height: 800px;
     position: relative;
 }
 .textA {
@@ -430,28 +411,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-.btn2 {
-    position: absolute;
-    top: 1080px;
-    left: 490px;
-    color: rgb(250, 3, 3, 0.6);
-    font-weight: 100;
-    font-family: 'Arista Signature';
-    font-size: 35px;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    background-color: rgba(14,13,13);
-}
-/* PAINTING PAGE 2 */
 .img2 {
     top: 120px;
     left: 280px;
-    width: 400px;
-    height: 800px;
     position: relative;
 }
 .textB {
@@ -499,12 +461,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-/* PAINTING PAGE 3 */
 .img3 {
     top: 120px;
     left: 160px;
-    width: 700px;
-    height: 700px;
     position: relative;
 }
 .textC {
@@ -552,28 +511,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-.btn3 {
-    position: absolute;
-    top: 980px;
-    left: 670px;
-    color: rgb(250, 3, 3, 0.6);
-    font-weight: 100;
-    font-family: 'Arista Signature';
-    font-size: 35px;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    background-color: rgba(14,13,13);
-}
-/* PAINTING PAGE 4 */
 .img4 {
     top: 120px;
     left: 260px;
-    width: 500px;
-    height: 700px;
     position: relative;
 }
 .textD {
@@ -621,6 +561,38 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
+.btn2 {
+    position: absolute;
+    top: 1080px;
+    left: 490px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn3 {
+    position: absolute;
+    top: 980px;
+    left: 670px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
 .btn4 {
     position: absolute;
     top: 980px;
@@ -637,9 +609,8 @@ body {
     transition: all 0.3s ease;
     background-color: rgba(14,13,13);
 }
-
-/* PORTRAIT */
-.portrait {
+/*    PORTRET    */
+.portret {
     height: 100%;
     width: 0;
     position: fixed;;
@@ -650,13 +621,13 @@ body {
     overflow-x: hidden;
     transition: 0.4s;
 }
-.portrait1 {
+.portret1 {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.portrait .closebtn {
+.portret .closebtn {
     position: absolute;
     top: 10px;
     right: 39px;
@@ -664,12 +635,9 @@ body {
     color: rgb(250, 3, 3);
     text-decoration: none;
 }
-/* PORTRAIT PAGE 1 */
 .img5 {
     top: 120px;
     left: 140px;
-    width: 700px; 
-    height: 600px;
     position: relative;
 }
 .textE {
@@ -717,28 +685,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-.btn5 {
-    position: absolute;
-    top: 880px;
-    left: 650px;
-    color: rgb(250, 3, 3, 0.6);
-    font-weight: 100;
-    font-family: 'Arista Signature';
-    font-size: 35px;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    background-color: rgba(14,13,13);
-}
-/* PORTRAIT PAGE 2 */
 .img6 {
     top: 120px;
     left: 200px;
-    width: 600px;
-    height: 700px;
     position: relative;
 }
 .textF {
@@ -786,28 +735,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-.btn6 {
-    position: absolute;
-    top: 980px;
-    left: 610px;
-    color: rgb(250, 3, 3, 0.6);
-    font-weight: 100;
-    font-family: 'Arista Signature';
-    font-size: 35px;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    background-color: rgba(14,13,13);
-}
-/* PORTRAIT PAGE 3 */
 .img7 {
     top: 120px;
     left: 120px;
-    width: 800px;
-    height: 600px;
     position: relative;
 }
 .textG {
@@ -855,28 +785,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-.btn7 {
-    position: absolute;
-    top: 880px;
-    left: 730px;
-    color: rgb(250, 3, 3, 0.6);
-    font-weight: 100;
-    font-family: 'Arista Signature';
-    font-size: 35px;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    background-color: rgba(14,13,13);
-}
-/* PORTRAIT PAGE 4 */
 .img8 {
     top: 120px;
     left: 200px;
-    width: 600px;
-    height: 700px;
     position: relative;
 }
 .textH {
@@ -924,6 +835,54 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
+.btn5 {
+    position: absolute;
+    top: 880px;
+    left: 650px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn6 {
+    position: absolute;
+    top: 980px;
+    left: 610px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+.btn7 {
+    position: absolute;
+    top: 880px;
+    left: 730px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
 .btn8 {
     position: absolute;
     top: 980px;
@@ -940,8 +899,7 @@ body {
     transition: all 0.3s ease;
     background-color: rgba(14,13,13);
 }
-
-/* STILLIFE */
+/*    STILLIFE    */
 .stilllife {
     height: 100%;
     width: 0;
@@ -967,12 +925,9 @@ body {
     color: rgb(250, 3, 3);
     text-decoration: none;
 }
-/* STILLIFE PAGE 1 */
 .img9 {
     top: 260px;
     left: 100px;
-    width: 800px;
-    height: 400px;
     position: relative;
 }
 .textI {
@@ -1020,28 +975,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-.btn9 {
-    position: absolute;
-    top: 810px;
-    left: 710px;
-    color: rgb(250, 3, 3, 0.6);
-    font-weight: 100;
-    font-family: 'Arista Signature';
-    font-size: 35px;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    background-color: rgba(14,13,13);
-}
-/* STILLIFE PAGE 2 */
 .img10 {
     top: 120px;
     left: 170px;
-    width: 660px; 
-    height: 660px;
     position: relative;
 }
 .textJ {
@@ -1089,12 +1025,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-/* STILLIFE PAGE 3 */
 .img11 {
     top: 120px;
     left: 170px;
-    width: 660px;
-    height: 660px;
     position: relative;
 }
 .textK {
@@ -1142,12 +1075,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-/* STILLIFE PAGE 4 */
 .img12 {
     top: 120px;
     left: 170px;
-    width: 660px;
-    height: 660px;
     position: relative;
 }
 .textL {
@@ -1195,8 +1125,23 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-
-/* LANDSCAPE */
+.btn9 {
+    position: absolute;
+    top: 810px;
+    left: 710px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
+/*    LANDSCAPE    */
 .landscape {
     height: 100%;
     width: 0;
@@ -1222,12 +1167,9 @@ body {
     color: rgb(250, 3, 3);
     text-decoration: none;
 }
-/* LANDSCAPE PAGE 1 */
 .img13 {
     top: 120px;
     left: 170px;
-    width: 660px; 
-    height: 660px;
     position: relative;
 }
 .textM {
@@ -1275,12 +1217,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-/* LANDSCAPE PAGE 2 */
 .img14 {
     top: 120px;
     left: 170px;
-    width: 660px;
-    height: 660px;
     position: relative;
 }
 .textN {
@@ -1328,12 +1267,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-/* LANDSCAPE PAGE 3 */
 .img15 {
     top: 220px;
     left: 140px;
-    width: 700px;
-    height: 500px;
     position: relative;
 }
 .textO {
@@ -1381,28 +1317,9 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
-.btn10 {
-    position: absolute;
-    top: 880px;
-    left: 650px;
-    color: rgb(250, 3, 3, 0.6);
-    font-weight: 100;
-    font-family: 'Arista Signature';
-    font-size: 35px;
-    width: 190px;
-    height: 40px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    transition: all 0.3s ease;
-    background-color: rgba(14,13,13);
-}
-/* LANDSCAPE PAGE 4 */
 .img16 {
     top: 220px;
     left: 140px;
-    width: 700px;
-    height: 500px;
     position: relative;
 }
 .textP {
@@ -1450,6 +1367,22 @@ body {
     font-family: 'Poiret One', cursive;
     color: rgb(250, 3, 3);
 }
+.btn10 {
+    position: absolute;
+    top: 880px;
+    left: 650px;
+    color: rgb(250, 3, 3, 0.6);
+    font-weight: 100;
+    font-family: 'Arista Signature';
+    font-size: 35px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    background-color: rgba(14,13,13);
+}
 .btn11 {
     position: absolute;
     top: 880px;
@@ -1466,10 +1399,14 @@ body {
     transition: all 0.3s ease;
     background-color: rgba(14,13,13);
 }
-
-/* SLIDER */
+/*    SLIDER    */
 .prev:hover, .next:hover {
     color: rgb(250, 3, 3);
+}
+.products {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 .prev, .next {
     cursor: pointer;
@@ -1487,11 +1424,12 @@ body {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-.prev:hover, .next:hover {
-    color: rgb(250, 3, 3);
+/*    MEDIA SCREEN    */
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
 }
-
-/* FOOTER */
+/*    FOOTER    */
 h1 {
     position: absolute;
     top: 834px;
@@ -1513,475 +1451,88 @@ h1 {
 .social-icon a:hover {
     color: rgb(250, 3, 3);
 }
-
-
-/* MEDIA SCREEN */
-/* !!!!MUST CHANGE: ALL; WRONG MEDIA QUERIES */
-
-/* -- FOR IPHONE 6 */
-/* !!!!MUST ADD: m queries for .img3,4,6,7,8,10,11,12,15,16 */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
-    }
-    body {
-        background-size:cover; 
-        background-attachment: fixed; 
-        background-repeat: no-repeat; 
-        background-position: center;
-    }
-    footer h1 {
-        float: right;
-        top: 834px;
-        right: 7px;
-        font-weight: 100;
-        font-size: 54px;
-        font-family: 'Arista Signature';
-        color: rgb(7, 7, 7);
-    }
-    .social-icon {
-        float: right;
-        top: 875px;
-        font-size: 25px;
-    }
+/*    FONTS    */
+font-face {
+	font-family: Poiret One, cursive; 
+	src: url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');  
+	font-weight: normal;  
+}
+/*
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*/
+font-face {
+	font-family: Arista Signature; 
+	src: url('fonts/arista-signature/Arista Signature.woff2') format('woff2'),
+    url('fonts/arista-signature/Arista Signature.woff') format('woff');  
+	font-weight: normal;  
+}
+@import url('http://fonts.cdnfonts.com/css/arista-signature');
+/*    MEDIA SCREEN    */
+/*
+@media(max-width: 850px){
     .basket {
-        width: 5px;
-        height: 5px;
-        margin-top: 13px;
-    }
-    #menuToggle {
-        width: 30px;
-        height: 30px;
-        right: 5px;
-    }
-    .basketMessage {
-        width: 220px;
-        height: 120px;
-    }
-    .basketMessageElm, .noItems, .basketMessageText, .basketMessagePrice,
-    .basketClear, .totalPrice, .cart, .cartItems, .prices0Dom {
-        font-size: 15px;
-    }
-    .nav-menu {
-       height: 30px;
-       width: 200px;
-       overflow: hidden;
-    }
-    #menu {
-       height: 30px;
-       max-width: 300px;
-    }
-    .nav-menu ul li a {
-        text-decoration: none;
-        color: white;
-        font-family: 'Poiret One', cursive;
-        font-size: 10px;
-        line-height: 1px;
-        margin: 3px;
-        vertical-align: 9px;
-    }
-    #figurative1, #painting1, #landscape1, #portret1, #stillife1 {
-        max-width: 480px;
-        height: 100%;
-    }
-    #figurative1 img {
-        width: 270px !important;
-        height: 270px !important;
-        top: 0;
-        left: -125px;
-        position: relative;
-    }
-    .painting img {
-        width: 250px !important;
-        height: 400px !important;
-        top: 0;
-        left: -230px;
-        position: relative;
-    } 
-    .painting p {
-        top: 110px;
-        position: relative;
-        left: 50px;
-        font-size: 15px;
-        font-weight: 100;
-        font-family: 'Poiret One', cursive;
-        color: rgb(250, 3, 3);
-    }
-    .figurative p {
-        top: 110px;
-        position: relative;
-        left: 43px;
-        font-size: 15px;
-        font-weight: 100;
-        font-family: 'Poiret One', cursive;
-        color: rgb(250, 3, 3);
-    }
-    .painting .prev, .painting .next {
-        top: 295px;
-        width:auto;
-        max-width: 1000px;
-        padding: 3px;
-        margin-top: 0;
-        font-size: 30px;
-        max-width: 940px;
-    }
-    .figurative .prev, .figurative .next {
-        top: 235px;
-        width:auto;
-        max-width: 1000px;
-        padding: 3px;
-        margin-top: 0;
-        font-size: 30px;
-        max-width: 940px;
-    }
-    #figurative1 .closebtn, #painting1 .closebtn, #portrait1 .closebtn,
-    #stilllife1 .closebtn, #landscape1 .closebtn {
-        top: 5px;
-        right: 8px;
-        font-size: 30px;
-        color: rgb(250, 3, 3);
-        text-decoration: none;
-        position: absolute;
-    }
-    #painting1 button {
-        top: 655px;
-        left: 161px;
-        color: rgb(250, 3, 3, 0.6);
-        font-weight: 100;
-        font-family: 'Arista Signature';
-        font-size: 30px;
-        width: 145px;
-        height: 35px;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid rgb(255, 255, 255, 0.6);
-        transition: all 0.3s ease;
-        background-color: rgba(14,13,13);
-        position: absolute;
-    }
-    #figurative1 button {
-        top: 510px;
-        left: 172px;
-        color: rgb(250, 3, 3, 0.6);
-        font-weight: 100;
-        font-family: 'Arista Signature';
-        font-size: 30px;
-        width: 145px;
-        height: 35px;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid rgb(255, 255, 255, 0.6);
-        transition: all 0.3s ease;
-        background-color: rgba(14,13,13);
-        position: absolute;
-    }
-    .portrait img {
-        width: 300px !important;
-        height: 300px !important;
-        top: 0;
-        left: -110px;
-        position: relative;
-    }
-    .portrait p {
-        top: 110px;
-        position: relative;
-        left: 29px;
-        font-size: 15px;
-        font-weight: 100;
-        font-family: 'Poiret One', cursive;
-        color: rgb(250, 3, 3);
-    }
-    .stilllife img {
-        width: 300px !important;
-        height: 200px !important;
-       top: -140px;
-       left: -65px;
-       position: relative;
-    }
-    .stilllife p {
-        top: 110px;
-        position: relative;
-        left: 35px;
-        font-size: 15px;
-        font-weight: 100;
-        font-family: 'Poiret One', cursive;
-        color: rgb(250, 3, 3);
-    }
-    .landscape  img {
-        width: 250px !important;
-        height: 250px !important;
-       top: 0;
-       left: -115px;
-       position: relative;
-    }
-    .landscape p {
-        top: 115px;
-        position: relative;
-        left: 55px;
-        font-size: 15px;
-        font-weight: 100;
-        font-family: 'Poiret One', cursive;
-        color: rgb(250, 3, 3);
-    }
-    .stilllife .prev, .stilllife .next {
-        top: 200px;
-        width:auto;
-        max-width: 1000px;
-        padding: 3px;
-        margin-top: 0;
-        font-size: 30px;
-        max-width: 940px;
-    }
-    .portrait .prev, .portrait .next {
-        top: 250px;
-        width:auto;
-        max-width: 1000px;
-        padding: 3px;
-        margin-top: 0;
-        font-size: 30px;
-        max-width: 940px;
-    }
-    .landscape .prev, .landscape .next {
-        top: 230px;
-        width:auto;
-        max-width: 1000px;
-        padding: 3px;
-        margin-top: 0;
-        font-size: 30px;
-        max-width: 940px;
-    }
-    #portrait1 button {
-        top: 547px;
-        left: 182px;
-        color: rgb(250, 3, 3, 0.6);
-        font-weight: 100;
-        font-family: 'Arista Signature';
-        font-size: 30px;
-        width: 145px;
-        height: 35px;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid rgb(255, 255, 255, 0.6);
-        transition: all 0.3s ease;
-        background-color: rgba(14,13,13);
-        position: absolute;
-    }
-    #stilllife1 button {
-        top: 445px;
-        left: 185px;
-        color: rgb(250, 3, 3, 0.6);
-        font-weight: 100;
-        font-family: 'Arista Signature';
-        font-size: 30px;
-        width: 145px;
-        height: 35px;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid rgb(255, 255, 255, 0.6);
-        transition: all 0.3s ease;
-        background-color: rgba(14,13,13);
-        position: absolute;
-    }
-    #landscape1 button {
-        top: 500px;
-        left: 161px;
-        color: rgb(250, 3, 3, 0.6);
-        font-weight: 100;
-        font-family: 'Arista Signature';
-        font-size: 30px;
-        width: 145px;
-        height: 35px;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid rgb(255, 255, 255, 0.6);
-        transition: all 0.3s ease;
-        background-color: rgba(14,13,13);
-        position: absolute;
-    }
-} 
-
-/* -- FOR IPAD PORTRAIT AND OTHER TABLETS */
-/* !!!!MUST ADD: m queries for .img 1,2,3,4,5,6,7,8,9,15,16 */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
-    }
-    body {
-        background-size:cover; 
-        background-attachment: fixed; 
-        background-repeat: no-repeat; 
-        background-position: center;
-    }
-    #figurative1, #painting1, #landscape1, #portrait1, #stillife1 {
-        max-width: 768px;
-        height: 100%;
-    }
-    #figurative1 .closebtn, #painting1 .closebtn, #portrait1 .closebtn,
-    #stilllife1 .closebtn, #landscape1 .closebtn {
-        position: absolute;
-        top: 10px;
-        right: 39px;
-        font-size: 40px;
-        color: rgb(250, 3, 3);
-        text-decoration: none;
-    }
-    .figurative img {
-        width: 600px;
-        height: 600px;
-        top: -120px;
-        left: 20px;
-    }
-    .figurative p {
-        top: 110px;
-        position: relative;
-        left: 58px;
-        font-size: 20px;
-        font-weight: 100;
-        font-family: 'Poiret One', cursive;
-        color: rgb(250, 3, 3);
-    }
-    .figurative .prev, .figurative .next {
-        top: 405px;
-        width: auto;
-        padding: 16px;
-        max-width: 768px;
-        margin-top: 0;
-        font-size: 35px;
-    }
-    #figurative1 button {
-        position: absolute;
-        top: 890px;
-        left: 470px;
-        color: rgb(250, 3, 3, 0.6);
-        font-weight: 100;
-        font-family: 'Arista Signature';
-        font-size: 35px;
-        width: 190px;
-        height: 40px;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid rgb(255, 255, 255, 0.6);
-        transition: all 0.3s ease;
-        background-color: rgba(14,13,13);
+        max-width: 100px;
     }
 }
-/* ++ FOR IPAD LANDSCAPE */
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
+  
+@media(max-width: 520px){
+    .basket{
+        max-width: 70px;
     }
 }
-/* ++ FOR IPAD PRO LANDSCAPE */
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
+@media (max-width: 1000px) {
+    .mainBody {
+      justify-content: center;
     }
 }
-/* !!!!must add: m queries for all pages */
-/* -- FOR IPAD PRO PORTRET */
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
-    .closebtn {
-        z-index: 99;
-        transition: 0.4s;
-    }
-    footer h1 {
-        float: right;
-        top: 1234px;
-        right: 7px;
-    }
-    .social-icon {
-        float: right;
-        top: 1275px;
+@media (max-width: 940px) {
+    .mainBody{
+      padding: 0;
     }
 }
-/* ++ FOR TABLETS LANDSCAPE */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
-    }
-    footer h1 {
-        float: right;
-        top: 1234px;
-        right: 7px;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 1275px;
+@media (max-width: 940px) {
+    .figurative-content{
+      width: 90vw;
     }
 }
-/* ++ FOR LAPTOPS */
-@media only screen and (min-width: 1024px) and (max-width: 1600px) {
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
-    }
-    footer h1 {
-        float: right;
-        top: 1234px;
-        right: 7px;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 1275px;
+@media (max-width: 750px) {
+    .figurative-content{
+      max-width: auto;
     }
 }
-/* ++ FOR IMAC (27'') */
-@media only screen and (min-width: 2560px){
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
-    }
-    footer h1 {
-        float: right;
-        top: 2230px;
-        right: 7px;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 2265px;
+@media (max-width: 1270px) {
+    .product {
+      max-width: 200px;
+      width: 100%;
     }
 }
-/* -- FOR IMAC RETINA(21.7'') */
-/* !!!!must add: m queries for all art-content */
-@media only screen and (min-width: 4096px){
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
-    }
-    footer h1 {
-        float: right;
-        top: 2234px;
-        right: 7px;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 2275px;
+@media (max-width: 1170px) {
+    .product {
+      max-width: 180px;
+      width: 100%;
     }
 }
-/* -- FOR IMAC RETINA(27'') */
-/* !!!!must add: m queries for all art-content */
-@media only screen and (min-width: 5120px){
-    .closebtn {
-        z-index:99;
-        transition: 0.4s;
-    }
-    footer h1 {
-        float: right;
-        top: 2705px;
-        right: 7px;
-        font-size: 54px;
-    }
-    .social-icon {
-        float: right;
-        top: 2730px;
+@media (max-width: 940px) {
+    .product {
+      max-width: 210px;
+      width: 100%;
     }
 }
+@media (max-width: 750px) {
+    .product{
+      max-width: 400px;
+      width: 400px;
+  }
+}
+@media (max-width: 750px) {
+    .product{
+      max-width: 250px;
+      width: 250px;
+    }
+}
+@media (max-width: 1170px) {
+    .btn-1 {
+      font-size: 12px;
+    }
+}
+*/
